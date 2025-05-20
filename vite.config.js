@@ -35,7 +35,7 @@ export default defineConfig(({ mode }) => {
             three: ['three'],
             gsap: ['gsap'],
             howler: ['howler'],
-            tween: ['tween.js'],
+            tween: ['@tweenjs/tween.js'],
           },
         },
       },
