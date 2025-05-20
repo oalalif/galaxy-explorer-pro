@@ -1,0 +1,24 @@
+// Checking animate function
+1372:function animate() {
+1373-  if (!animationLoopActive) {
+1374-    console.log('Animation loop canceled - flag is false');
+1375-    return; // Don't continue if animation should be stopped
+1376-  }
+1377-  
+1378-  requestAnimationFrame(animate);
+1379-
+1380-  // Update physics
+1381-  world.step(1/60);
+1382-  
+--
+1542:function animateSpaceObjects() {
+1543-  const elapsedTime = clock.getElapsedTime();
+1544-  
+1545-  // Animate planets
+1546-  planets.forEach((planet, index) => {
+1547-    // Update planet orbit
+1548-    if (planet.orbitRadius && planet.orbitSpeed) {
+1549-      planet.planetGroup.position.x = Math.cos(elapsedTime * planet.orbitSpeed) * planet.orbitRadius;
+1550-      planet.planetGroup.position.z = Math.sin(elapsedTime * planet.orbitSpeed) * planet.orbitRadius;
+1551-    }
+1552-    
