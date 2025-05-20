@@ -1,5 +1,0 @@
-  // Render
-  renderer.render(scene, camera);
-}
-
-// Mark the app as initialized
