@@ -14,6 +14,10 @@ export default defineConfig(({ mode }) => {
     define: {
       __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     },
+    publicDir: 'public',
+    optimizeDeps: {
+      include: ['three', 'gsap', 'howler', '@tweenjs/tween.js'],
+    },
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
